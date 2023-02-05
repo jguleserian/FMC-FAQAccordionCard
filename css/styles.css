@@ -1,0 +1,230 @@
+/*-----RESET & VARIABLES-----*/
+
+ :root {
+    font-family: 'Kumbh Sans', sans-serif;
+    /*--text primary--*/
+    --blue-dark: #1E1F36;
+    --orange: #f47c57;
+    /*--text neutral--*/
+    --dark-gray-blue: #4a4b5e;
+    --med-gray-blue: #787887;
+    /*--dividers--*/
+    --light-gray-blue: #e7e7e9;
+    /*--Gradient--*/
+    --violet-soft: #af67e9;
+    --blue-soft: #6565e7;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+
+/*-----CONTAINERS (HTML order)-----*/
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 144rem;
+    height: 76.8rem;
+    background-image: linear-gradient(var(--violet-soft), var(--blue-soft));
+}
+
+div.container {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    width: 64%;
+    height: 66.28%;
+    margin-left: 4.2rem;
+    background-color: white;
+    border-radius: 2.3rem;
+    box-shadow: 0 50px 50px -20px rgba(53, 18, 122, 0.497159);
+}
+
+section.illustration {
+    grid-column: 1 / 2;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+picture.pattern {
+    position: absolute;
+    right: 0;
+    top: -57.8%;
+}
+
+picture.online {
+    position: absolute;
+    grid-column: 1 /2;
+    right: 0;
+    width: 122%;
+    top: 13.75%;
+}
+
+section.pic {
+    position: absolute;
+    grid-column: 1 / 2;
+    display: flex;
+    height: 50.4rem;
+    width: 19.4rem;
+}
+
+section.details {
+    grid-column: 2 / 3;
+    margin: 0 0 0 16.5%;
+}
+
+details {
+    width: 75%;
+    min-height: 3.2rem;
+    height: auto;
+    margin-top: 1.9rem;
+    border-bottom: 1px solid var(--light-gray-blue);
+}
+
+details>summary {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    color: var(--blue-dark);
+    list-style: none;
+}
+
+details>summary:hover {
+    color: var(--orange);
+}
+
+details>summary::after {
+    display: inline;
+    content: url("/images/icon-arrow-down.svg");
+    float: right;
+}
+
+details[open]>summary::after {
+    transform: rotate(180deg);
+}
+
+details[open]>summary {
+    font-weight: 700;
+    color: var(--blue-dark);
+    cursor: pointer;
+}
+
+
+/*-----ELEMENTS (ALPHA order)-----*/
+
+h1.sr-only {
+    display: none;
+}
+
+h2 {
+    margin: 14.2% 0 8% 0;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    color: var(--blue-dark);
+}
+
+img.box {
+    position: absolute;
+    display: inline-block;
+    left: -9.5rem;
+    top: 40.47%;
+}
+
+p {
+    margin: .9rem 0 1.3rem 0;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: var(--med-gray-blue);
+}
+
+
+/*-----CLASSES & IDs (ALPHA order)-----*/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/*-----MEDIA QUERIES-----*/
+
+@media screen and (max-width: 375px) {
+    /*-----CONTAINERS & DESCENDENTS (HTML order)-----*/
+    main {
+        max-width: 37.5rem;
+        height: 76.8rem;
+    }
+    div.container {
+        grid-template-rows: 25% 75%;
+        grid-template-columns: unset;
+        width: 32.7rem;
+        height: 53.5rem;
+        margin-left: 0;
+        margin-top: 6rem;
+        overflow: visible;
+    }
+    section.illustration {
+        grid-column: unset;
+        width: 32.7rem;
+        grid-row: 1 / 2;
+        overflow: visible;
+    }
+    picture.pattern {
+        position: absolute;
+        top: 0;
+        right: 4.35rem;
+        left: 1fr;
+    }
+    picture.online {
+        top: -10.9rem;
+        width: 23.7rem;
+        right: 4.35rem;
+    }
+    section.pic {
+        display: none;
+    }
+    section.details {
+        grid-column: unset;
+        grid-row: 2 / 3;
+        width: 32.7rem;
+        margin: 0;
+    }
+    h2 {
+        width: rem;
+        margin: 0 0 3rem 0;
+        text-align: center;
+    }
+    details {
+        width: 27.9rem;
+        margin: 1.9rem 2.4rem 0 2.4rem;
+    }
+    details>summary {
+        font-size: 1.3rem;
+        line-height: 1.612rem;
+    }
+}
