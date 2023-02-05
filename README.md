@@ -47,7 +47,7 @@ Personal Challenges:
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/jguleserian/FMC-FAQAccordionCard.git)
-- Live Site URL: [GitHub Sites](https://your-live-site-url.com)
+- Live Site URL: [GitHub Pages](https://jguleserian.github.io/FMC-FAQAccordionCard/)
 
 ## My process
 
